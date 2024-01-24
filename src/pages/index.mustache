@@ -85,8 +85,7 @@
   <div class="container  px-4 ">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-12 col-sm-8 col-lg-6">
-        <img
-          src="https://t4.ftcdn.net/jpg/05/57/29/25/360_F_557292539_2kXYz0frOcCGISoYEd2MNTmxyT0lYyOj.jpg"
+        <img src="https://t4.ftcdn.net/jpg/05/57/29/25/360_F_557292539_2kXYz0frOcCGISoYEd2MNTmxyT0lYyOj.jpg"
           class="d-block mx-lg-auto img-fluid rounded mx-auto mb-3" alt="Bootstrap Themes" width="700" height="500"
           loading="lazy">
       </div>
@@ -113,173 +112,28 @@
   </div>
 
   <!--JOBS-->
+  <!--JOBS-->
   <div class="container px-4 mt-5">
-    <h2 class="text-center mb-4">Skills </h2>
-    <!-- jobs list -->
+    <h2 class="text-center mb-4">Job Opportunities</h2>
+
+    <!--JOBS LIST-->
     <div class="d-md-none">
-      <div class="card my-4">
-        <div class="card-body ">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-1 text-body-secondary">Card subtitle</h6>
-          <small class="card-text text-body-secondary">Some quick example text to build on the card title and make up
-            the
-            bulk of the card's content.</small>
-          <!-- <a href="#" class="card-link">Card link</a> -->
-          <!-- <a href="#" class="card-link">Another link</a> -->
+
+      {{#jobs}}
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/jobs/{{id}}">{{title}}</a></h5>
+          <h6 class="card-subtitle my-1 text-body-secondary">
+            {{location}} • {{salary}}
+          </h6>
+          <small class="card-text text-body-secondary">
+            Posted {{posted}}
+          </small>
         </div>
       </div>
-      <div class="card my-4">
-        <div class="card-body ">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-1 text-body-secondary">Card subtitle</h6>
-          <small class="card-text text-body-secondary">Some quick example text to build on the card title and make up
-            the
-            bulk of the card's content.</small>
-          <!-- <a href="#" class="card-link">Card link</a> -->
-          <!-- <a href="#" class="card-link">Another link</a> -->
-        </div>
-      </div>
-      <div class="card my-4">
-        <div class="card-body ">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-1 text-body-secondary">Card subtitle</h6>
-          <small class="card-text text-body-secondary">Some quick example text to build on the card title and make up
-            the
-            bulk of the card's content.</small>
-          <!-- <a href="#" class="card-link">Card link</a> -->
-          <!-- <a href="#" class="card-link">Another link</a> -->
-        </div>
-      </div>
-      <div class="card my-4">
-        <div class="card-body ">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-1 text-body-secondary">Card subtitle</h6>
-          <small class="card-text text-body-secondary">Some quick example text to build on the card title and make up
-            the
-            bulk of the card's content.</small>
-          <!-- <a href="#" class="card-link">Card link</a> -->
-          <!-- <a href="#" class="card-link">Another link</a> -->
-        </div>
-      </div>
+      {{/jobs}}
+
     </div>
-
-    <!-- table -->
-    <div class="offset-lg-2 col-lg-8">
-      <table class="d-none d-md-table table table-striped table-bordered">
-        <tr class="table-primary text-center">
-          <th rowspan="2">Job Title</th>
-          <th colspan="2">Location</th>
-          <th rowspan="2">Salary</th>
-          <th rowspan="2">Posted On</th>
-        </tr>
-        <tr class="table-primary text-center">
-          <th>City</th>
-          <th>Country</th>
-        </tr>
-        <tr class="table-secondary">
-          <td>Frontend Developer</td>
-          <td>Bengaluru</td>
-          <td>India</td>
-          <td>₹12,00,000</td>
-          <td>Mar 3, 2023</td>
-        </tr>
-
-        <tr>
-          <td>Full Stack Developer</td>
-          <td>New Delhi</td>
-          <td>India</td>
-          <td>₹15,00,000</td>
-          <td>Feb 1, 2023</td>
-        </tr>
-
-        <tr class="table-secondary">
-          <td>Data Scientist</td>
-          <td>San Francisco</td>
-          <td>USA</td>
-          <td>$175,000</td>
-          <td>Dec 22, 2022</td>
-        </tr>
-
-        <tr>
-          <td>ML Engineer</td>
-          <td colspan="2">Remote</td>
-          <td>$80,000</td>
-          <td>Sep 19, 2022</td>
-        </tr>
-      </table>
-    </div>
-
-  </div>
-
-  <!--APPLICATION FORM-->
-  <div class="container px-4">
-    <h2 class="text-center mb-4">Submit Your Application</h2>
-    <form class="offset-lg-2 col-lg-8" action="https://formbold.com/s/3wvKl" method="POST"
-      enctype="multipart/form-data">
-      <!--NAME-->
-      <div class="mb-3 col-sm-6">
-        <label for="fullname" class="form-label"> Full Name </label>
-        <input type="text" class="form-control" name="name" required placeholder="John Doe" id="fullname" />
-      </div>
-
-      <!--EMAIL-->
-      <div class="mb-3 col-sm-6">
-        <label for="email" class="form-label"> Email address </label>
-        <input type="email" class="form-control" name="email" placeholder="john@doe.com" id="email"
-          aria-describedby="emailHelp" required />
-        <div id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
-        </div>
-      </div>
-
-      <!--PHONE-->
-      <div class="mb-3 col-sm-6">
-        <label for="phone" class="form-label">Phone</label>
-        <input type="tel" class="form-control" id="phone" placeholder="+919898989898" name="phone" required />
-      </div>
-
-      <!--DOB-->
-      <div class="mb-3 col-sm-6">
-        <label for="dob" class="form-label">Date of Birth</label>
-        <input type="date" class="form-control" id="phone" name="phone" required />
-      </div>
-
-      <!--POSITION-->
-      <div class="mb-3 col-sm-6">
-        <label for="position" class="form-label">Position Applied For</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected value="">Select a position</option>
-          <option value="frontend developer">Frontend Developer</option>
-          <option value="full stack developer">Full Stack Developer</option>
-          <option value="data scientist">Data Scientist</option>
-          <option value="ml engineer ">ML Engineer</option>
-        </select>
-      </div>
-
-      <!--RESUME-->
-      <div class="mb-3 col-sm-6">
-        <label for="resume" class="form-label">Upload Resume</label>
-        <input type="file" class="form-control" id="resume" name="resume" required />
-      </div>
-
-      <!--COVER LETTER-->
-      <div class="mb-3">
-        <label for="resume" class="form-label">Cover Letter</label>
-        <textarea placeholder="Why should we consider you for the job?" class="form-control" id="resume" name="resume"
-          rows="5" required></textarea>
-      </div>
-
-      <!--TERMS-->
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="terms" />
-        <label class="form-check-label" for="terms">I agree to the terms and coditions.</label>
-      </div>
-
-      <!--SUBMIT BUTTON-->
-      <button type="submit" class="btn btn-primary">
-        Submit Application
-      </button>
-    </form>
   </div>
 
   <!--FOOTER-->
